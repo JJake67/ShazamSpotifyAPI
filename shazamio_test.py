@@ -7,9 +7,6 @@ import random
 
 import requests, json
 
-import urllib.request
-import tkinter
-
 #import os
 #import asyncio
 #from shazamio import Shazam
