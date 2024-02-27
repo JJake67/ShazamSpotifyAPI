@@ -113,7 +113,9 @@ def print_song_features(token, song_name):
     print("Valence: " + str(audio_feats["valence"]))
     print("Energy: " + str(audio_feats["energy"]))
 
-
+name ="smooth santana"
+token = get_token()
+print_song_features(token,name)
 # Searches for artist and returns their list of top tracks 
 #def get_songs_by_artist(token, artist_id):
 #    url = f"https://api.spotify.com/v1/artists/{artist_id}/top-tracks?country=BR"
