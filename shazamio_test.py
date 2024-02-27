@@ -3,7 +3,6 @@ from requests import post, get
 import os
 import base64
 import json
-import PySimpleGUI as sg
 import random
 
 import requests, json
