@@ -32,8 +32,13 @@ client_secret = "a35830533528441f9ae304893a279b38"
 def get_token():
     auth_string = client_id + ":" + client_secret
     auth_bytes = auth_string.encode("utf-8")
-    auth_base64 = str(base64.b64encode(auth_bytes), "utf-8")
-
+    auth_base64_py3 = str(base64.b64encode(auth_bytes), "utf-8")
+    auth_base64 = base64.b64encode(auth_bytes)
+    auth_base64 = auth_base64.decode("utf-8")
+    #auth_base64 = str(auth_base64)
+    #auth_base64 = str(auth_base64.encode(encoding = 'UTF-8', errors = 'ignore'))
+    print(auth_base64_py3)
+    print(auth_base64)
     url = "https://accounts.spotify.com/api/token"
     headers = { 
         "Authorization": "Basic " + auth_base64,
