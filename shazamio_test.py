@@ -37,7 +37,7 @@ def get_token():
     auth_base64 = auth_base64.decode("utf-8")
     #auth_base64 = str(auth_base64)
     #auth_base64 = str(auth_base64.encode(encoding = 'UTF-8', errors = 'ignore'))
-    print(auth_base64_py3)
+    #print(auth_base64_py3)
     print(auth_base64)
     url = "https://accounts.spotify.com/api/token"
     headers = { 
