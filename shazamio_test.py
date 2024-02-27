@@ -57,7 +57,7 @@ def search_for_artist(token, artist_name):
     url = "https://api.spotify.com/v1/search"
     headers = get_auth_headers(token)
 
-    query = f"?q={artist_name}&type=artist&limit=1"
+    query = "?q="+artist_name+"&type=artist&limit=1"
 
     query_url = url + query
     result = get(query_url, headers=headers)
@@ -119,12 +119,11 @@ def print_song_features(token, song_name):
     print("Valence: " + str(audio_feats["valence"]))
     print("Energy: " + str(audio_feats["energy"]))
 
-""""
+
 # Searches for artist and returns their list of top tracks 
-def get_songs_by_artist(token, artist_id):
-    url = f"https://api.spotify.com/v1/artists/{artist_id}/top-tracks?country=BR"
-    headers = get_auth_headers(token)
-    result = get(url, headers=headers)
-    json_result = json.loads(result.content)["tracks"]
-    return json_result
-""""
+#def get_songs_by_artist(token, artist_id):
+#    url = f"https://api.spotify.com/v1/artists/{artist_id}/top-tracks?country=BR"
+#    headers = get_auth_headers(token)
+#    result = get(url, headers=headers)
+#    json_result = json.loads(result.content)["tracks"]
+#    return json_result
