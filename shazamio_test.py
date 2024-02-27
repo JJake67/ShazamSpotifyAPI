@@ -13,9 +13,9 @@ import requests, json
 import urllib.request
 import tkinter
 
-import os
-import asyncio
-from shazamio import Shazam
+#import os
+#import asyncio
+#from shazamio import Shazam
 
 print('Get current working directory : ', os.getcwd())
 
@@ -24,13 +24,13 @@ load_dotenv()
 client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
 
-async def main():
-  shazam = Shazam()
-  out = await shazam.recognize_song(r'C:\Users\jnhol\Downloads\shazam_test\data\smooth_5secs.mp3')
-  print(out)
+#async def main():
+#  shazam = Shazam()
+#  out = await shazam.recognize_song(r'C:\Users\jnhol\Downloads\shazam_test\data\smooth_5secs.mp3')
+#  print(out)
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(main())
+#loop = asyncio.get_event_loop()
+#loop.run_until_complete(main())
 
 # Gets token for requesting spotify data
 def get_token():
