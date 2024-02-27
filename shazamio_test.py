@@ -6,8 +6,6 @@ import json
 import PySimpleGUI as sg
 import random
 
-from io import BytesIO
-from PIL import Image, ImageTk
 import requests, json
 
 import urllib.request
